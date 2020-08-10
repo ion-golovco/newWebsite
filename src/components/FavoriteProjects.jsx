@@ -35,7 +35,7 @@ class FavoriteProjects extends Component {
     }
     createSlide = (a) => {
         let link =
-            a.link != "" ? (
+            a.link !== "" ? (
                 <CardLink id ="cardlink" href={a.link}>{a.desc}</CardLink>
             ) : (
                 <CardText>{a.desc}</CardText>

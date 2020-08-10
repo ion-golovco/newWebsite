@@ -4,7 +4,6 @@ let w, h;
 let arrPart = [];
 let arrSines = [];
 let arrRockPart = [];
-let time = 0;
 let dx,
     period = 5000;
 let sines = 36;

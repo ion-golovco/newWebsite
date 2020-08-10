@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Container, Jumbotron, Row, Col, NavLink } from "reactstrap";
+import { Container, Jumbotron, Row, Col} from "reactstrap";
 
 import NavBar from "./components/NavBar";
 import Hello from "./components/Hello";
