@@ -50,55 +50,47 @@ const s = (p) => {
         rocket = p.loadImage("https://i.imgur.com/3uiw387.png");
     };
     p.draw = function () {
-
-        w = p.windowWidth;
-        h = p.windowHeight * 3;
-        p.createCanvas(w, h);
         p.noStroke();
+        p.fill(22);
+        p.rect(0, 0, w, hh);
+        p.fill(color.c1);
+        p.rect(0, hh, w, h);
 
-        
+        setGradient(0, hh + hh / 3, w, hh / 2, color.c1, color.c2);
+        setGradient(0, hh + hh / 2 + hh / 3, w, hh / 2, color.c2, color.c3);
+        setGradient(0, 2 * hh + hh / 3, w, hh / 2, color.c3, color.c4);
+        setGradient(0, 2 * hh + hh / 3 + hh / 2, w, hh / 1.5, color.c4, color.c5);
+
+        for (let i of arrSines) {
+            i.update();
             p.fill(22);
-            p.rect(0, 0, w, hh);
-            p.fill(color.c1);
-            p.rect(0, hh, w, h);
+            p.rect(i.pos.x, i.pos.y + h / 3 - 100, w / sines + 1, 200, 20);
+        }
 
-            setGradient(0, hh + hh / 3, w, hh / 2, color.c1, color.c2);
-            setGradient(0, hh + hh / 2 + hh / 3, w, hh / 2, color.c2, color.c3);
-            setGradient(0, 2 * hh + hh / 3, w, hh / 2, color.c3, color.c4);
-            setGradient(0, 2 * hh + hh / 3 + hh / 2, w, hh / 1.5, color.c4, color.c5);
-        
-        
-            for (let i of arrSines) {
+        for (let i of arrPart) {
+            let a = hh * 2.5 - i.pos.y;
+            if (a > 0) {
+                p.fill(222, a);
                 i.update();
-                p.fill(22);
-                p.rect(i.pos.x, i.pos.y + h / 3 - 100, w / sines + 1, 200, 20);
+                p.circle(i.pos.x, i.pos.y, i.size);
             }
-        
-        
-            for (let i of arrPart) {
-                let a = hh * 2.5 - i.pos.y;
-                if (a > 0) {
-                    p.fill(222, a);
-                    i.update();
-                    p.circle(i.pos.x, i.pos.y, i.size);
-                }
+        }
+        for (let i of arrRockPart) {
+            i.update();
+            if (rocketB.pos.y + 100 < i.pos.y) {
+                p.fill(i.color[0]);
+                p.circle(i.pos.x, i.pos.y, i.size);
             }
-            for (let i of arrRockPart) {
-                i.update();
-                if (rocketB.pos.y + 100 < i.pos.y) {
-                    p.fill(i.color[0]);
-                    p.circle(i.pos.x, i.pos.y, i.size);
-                }
-            }
-        
+        }
+
         p.push();
-        
-            p.translate(rocketB.pos.x, rocketB.pos.y);
-            p.rotate((p.PI / 180) * rocketB.angle);
-            p.imageMode(p.CENTER);
-            rocket.resize(100, 350);
-            p.image(rocket, 0, 0);
-        
+
+        p.translate(rocketB.pos.x, rocketB.pos.y);
+        p.rotate((p.PI / 180) * rocketB.angle);
+        p.imageMode(p.CENTER);
+        rocket.resize(100, 350);
+        p.image(rocket, 0, 0);
+
         p.pop();
         if (p.mouseY > hh / 3.5 && p.mouseY < h - hh / 8) {
             rocketB.nextPosy = p.mouseY;
