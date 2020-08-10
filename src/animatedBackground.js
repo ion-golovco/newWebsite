@@ -67,7 +67,6 @@ const s = (p) => {
             setGradient(0, 2 * hh + hh / 3, w, hh / 2, color.c3, color.c4);
             setGradient(0, 2 * hh + hh / 3 + hh / 2, w, hh / 1.5, color.c4, color.c5);
         
-        time += 0.01;
         
             for (let i of arrSines) {
                 i.update();
