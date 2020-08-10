@@ -1,0 +1,72 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+#jumbotron {
+    background-color: transparent;
+    color: white;
+}
+.navbar {
+    background-color: transparent;
+}
+.mainText {
+    font-size:  15vw;
+    color: #fc6666;
+}
+hr.light {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0.75),
+        rgba(255, 255, 255, 0)
+    );
+}
+#rocket {
+    position: absolute;
+    left: 50%;
+    top: 25%;
+}
+.card {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    color: #5a3f3f;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+.card:hover {
+    transform: translateY(-0.4em);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+}
+#pillText {
+    transition: 0.3s;
+    margin: 4rem 4rem;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background-color: snow;
+}
+#pillText:hover{
+    transform: translateY(-0.2em);
+    background-color: rgb(20,20,20);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+}
+#textBreak {
+    color: #fc6666;
+    background-color: transparent;
+    font-size:  30px;
+    text-align: center;
+}
+#footer{
+    color: #fc6666;
+    padding: 10px 20px;
+    background-color:  rgb(20,20,20);
+    margin-top:6em;
+    margin-bottom: 0em;
+    padding-bottom: 3em;
+    text-align: center;
+    border-radius: 0px;
+}
+#cardlink{
+    color: #fc6666;
+}
