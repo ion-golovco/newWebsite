@@ -1,4 +1,5 @@
 import p5 from "p5";
+import { isMobile } from "react-device-detect";
 
 let w, h;
 let arrPart = [];
@@ -66,36 +67,37 @@ const s = (p) => {
             p.fill(22);
             p.rect(i.pos.x, i.pos.y + h / 3 - 100, w / sines + 1, 200, 20);
         }
-
-        for (let i of arrPart) {
-            let a = hh * 2.5 - i.pos.y;
-            if (a > 0) {
-                p.fill(222, a);
+        if (!isMobile) {
+            for (let i of arrPart) {
+                let a = hh * 2.5 - i.pos.y;
+                if (a > 0) {
+                    p.fill(222, a);
+                    i.update();
+                    p.circle(i.pos.x, i.pos.y, i.size);
+                }
+            }
+            for (let i of arrRockPart) {
                 i.update();
-                p.circle(i.pos.x, i.pos.y, i.size);
+                if (rocketB.pos.y + 100 < i.pos.y) {
+                    p.fill(i.color[0]);
+                    p.circle(i.pos.x, i.pos.y, i.size);
+                }
             }
-        }
-        for (let i of arrRockPart) {
-            i.update();
-            if (rocketB.pos.y + 100 < i.pos.y) {
-                p.fill(i.color[0]);
-                p.circle(i.pos.x, i.pos.y, i.size);
+
+            p.push();
+
+            p.translate(rocketB.pos.x, rocketB.pos.y);
+            p.rotate((p.PI / 180) * rocketB.angle);
+            p.imageMode(p.CENTER);
+            rocket.resize(100, 350);
+            p.image(rocket, 0, 0);
+
+            p.pop();
+            if (p.mouseY > hh / 3.5 && p.mouseY < h - hh / 8) {
+                rocketB.nextPosy = p.mouseY;
             }
+            rocketB.update();
         }
-
-        p.push();
-
-        p.translate(rocketB.pos.x, rocketB.pos.y);
-        p.rotate((p.PI / 180) * rocketB.angle);
-        p.imageMode(p.CENTER);
-        rocket.resize(100, 350);
-        p.image(rocket, 0, 0);
-
-        p.pop();
-        if (p.mouseY > hh / 3.5 && p.mouseY < h - hh / 8) {
-            rocketB.nextPosy = p.mouseY;
-        }
-        rocketB.update();
     };
     function setGradient(x, y, w, h, c1, c2) {
         p.noFill();
