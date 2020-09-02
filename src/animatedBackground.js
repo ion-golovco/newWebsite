@@ -6,8 +6,8 @@ let arrPart = [];
 let arrSines = [];
 let arrRockPart = [];
 let dx,
-    period = 5000;
-let sines = 36;
+    period = isMobile ? 3000 : 5000;
+let sines = isMobile ? 12 : 36;
 let amp = 50;
 let hh;
 
@@ -37,18 +37,20 @@ const s = (p) => {
         let cnv = p.createCanvas(w, h);
         cnv.position(0, 0, "absolute");
         cnv.style("z-index: -100");
+        if (!isMobile) {
+            for (let i = 0; i < 400; i++) {
+                arrPart.push(new particle());
+            }
+            for (let i = 0; i < 300; i++) {
+                arrRockPart.push(new rocketParticle());
+            }
 
-        for (let i = 0; i < 400; i++) {
-            arrPart.push(new particle());
-        }
-        for (let i = 0; i < 300; i++) {
-            arrRockPart.push(new rocketParticle());
+            rocketB = new Rocket();
+            rocket = p.loadImage("https://i.imgur.com/3uiw387.png");
         }
         for (let i = -10; i < sines + 10; i++) {
             arrSines.push(new sineWaveRect((w / sines) * i));
         }
-        rocketB = new Rocket();
-        rocket = p.loadImage("https://i.imgur.com/3uiw387.png");
     };
     p.draw = function () {
         p.noStroke();
