@@ -1,5 +1,5 @@
 * {
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 #jumbotron {
     background-color: transparent;
@@ -9,7 +9,7 @@
     background-color: transparent;
 }
 .mainText {
-    font-size: 15vw;
+    font-size:  15vw;
     color: #fc6666;
 }
 hr.light {
@@ -36,9 +36,10 @@ hr.light {
     transition: 0.3s;
     font-size: 16px;
 }
-#mobilecard {
+#mobilecard{
     font-size: 10px;
 }
+
 
 .card:hover {
     transform: translateY(-0.4em);
@@ -51,31 +52,31 @@ hr.light {
     border-radius: 30px;
     background-color: snow;
 }
-#pillText:hover {
+#pillText:hover{
     transform: translateY(-0.2em);
-    background-color: rgb(20, 20, 20);
+    background-color: rgb(20,20,20);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
 }
 #textBreak {
     color: #fc6666;
     background-color: transparent;
-    font-size: 30px;
+    font-size:  30px;
     text-align: center;
 }
-#footer {
+#footer{
     color: #fc6666;
     padding: 10px 20px;
-    background-color: rgb(20, 20, 20);
-    margin-top: 6em;
+    background-color:  rgb(20,20,20);
+    margin-top:6em;
     margin-bottom: 0em;
     padding-bottom: 3em;
     text-align: center;
     border-radius: 0px;
-    clear: both;
-    position: relative;
-    height: 200px;
-    margin-top: -200px;
+        clear: both;
+        position: relative;
+        height: 3em;
+        margin-top: -3em;
 }
-#cardlink {
+#cardlink{
     color: #fc6666;
 }
