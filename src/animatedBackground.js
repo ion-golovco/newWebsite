@@ -7,8 +7,8 @@ let arrSines = [];
 let arrRockPart = [];
 let dx,
     period = isMobile ? 3000 : 5000;
-let sines = isMobile ? 12 : 36;
-let amp = 50;
+let sines = isMobile ? 10 : 36;
+let amp = isMobile ? 30 :50;
 let hh;
 
 let rocket, rocketB;
@@ -33,7 +33,7 @@ const s = (p) => {
     ];
     p.setup = function () {
         hh = h / 3;
-        dx = (p.TWO_PI / period) * 20;
+        dx = (6 / period) * 20;
         let cnv = p.createCanvas(w, h);
         cnv.position(0, 0, "absolute");
         cnv.style("z-index: -100");
@@ -48,8 +48,8 @@ const s = (p) => {
             rocketB = new Rocket();
             rocket = p.loadImage("https://i.imgur.com/3uiw387.png");
         }
-        for (let i = -10; i < sines + 10; i++) {
-            arrSines.push(new sineWaveRect((w / sines) * i));
+        for (let i = -1; i < sines; i++) {
+            arrSines.push(new sineWaveRect((w / sines) * i,i));
         }
     };
     p.draw = function () {
@@ -66,8 +66,13 @@ const s = (p) => {
 
         for (let i of arrSines) {
             i.update();
+            if(!isMobile){
             p.fill(22);
-            p.rect(i.pos.x, i.pos.y + h / 3 - 100, w / sines + 1, 200, 20);
+            p.rect(i.pos.n* w / sines + 1, i.pos.y + h / 3 - 100, w / sines + 1, 200, 20);
+            }else{
+                p.fill(252, 102, 102)
+                p.rect(i.pos.n* w / sines + 1, i.pos.y + h / 3 - 100, w / sines + 1, 150, 20);
+            }
         }
         if (!isMobile) {
             for (let i of arrPart) {
@@ -183,8 +188,8 @@ function killParticle(i) {
 }
 
 class sineWaveRect {
-    constructor(x) {
-        this.pos = { x: x, y: 0 };
+    constructor(x,n) {
+        this.pos = { x: x, y: 0,n:n };
         this.color = 100;
     }
     update() {
