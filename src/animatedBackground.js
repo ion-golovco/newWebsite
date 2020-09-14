@@ -8,7 +8,7 @@ let arrRockPart = [];
 let dx,
     period = isMobile ? 3000 : 5000;
 let sines = isMobile ? 16 : 36;
-let amp = isMobile ? 30 :50;
+let amp = isMobile ? 25 :50;
 let hh;
 
 let rocket, rocketB;
@@ -54,26 +54,26 @@ const s = (p) => {
     };
     p.draw = function () {
         p.noStroke();
-        p.fill(22);
-        p.rect(0, 0, w, hh);
         p.fill(color.c1);
-        p.rect(0, hh, w, h);
+        p.rect(0, 0, w, h);
+        p.fill(22);
+        p.rect(0, 0, w, hh-50);
+        
 
-        setGradient(0, hh + hh / 3, w, hh / 2, color.c1, color.c2);
-        setGradient(0, hh + hh / 2 + hh / 3, w, hh / 2, color.c2, color.c3);
-        setGradient(0, 2 * hh + hh / 3, w, hh / 2, color.c3, color.c4);
-        setGradient(0, 2 * hh + hh / 3 + hh / 2, w, hh / 1.5, color.c4, color.c5);
+        
 
         for (let i of arrSines) {
             i.update();
             if(!isMobile){
             p.fill(22);
-            p.rect(i.pos.n* w / sines + 1, i.pos.y + h / 3 - 100, w / sines + 1, 200, 20);
+            p.rect(i.pos.n* w / sines + 1, i.pos.y + h / 3 - 150, w / sines + 1, 200, 20);
             }else{
-                p.fill(252, 102, 102)
-                p.rect(i.pos.n* w / sines + 1, i.pos.y + h / 3 - 100, w / sines + 1, 150, 20);
+                p.stroke(252, 102, 102)
+                p.fill(22)
+                p.rect(i.pos.n* w / sines + 1, i.pos.y + h / 3 - 150, w / sines + 1, 120, 20);
             }
         }
+        p.noStroke();
         if (!isMobile) {
             for (let i of arrPart) {
                 let a = hh * 2.5 - i.pos.y;
