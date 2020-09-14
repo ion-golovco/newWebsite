@@ -106,17 +106,6 @@ const s = (p) => {
             rocketB.update();
         }
     };
-    function setGradient(x, y, w, h, c1, c2) {
-        p.noFill();
-        for (let i = y; i <= y + h; i++) {
-            let inter = p.map(i, y, y + h, 0, 1);
-            let c = p.lerpColor(c1, c2, inter);
-            p.stroke(c, 255);
-            p.rect(x, i, w, 1);
-        }
-        p.noStroke();
-    }
-
     class rocketParticle {
         constructor() {
             this.pos = { x: 0, y: p.random(h) };
