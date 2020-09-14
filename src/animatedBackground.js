@@ -7,15 +7,15 @@ let arrSines = [];
 let arrRockPart = [];
 let dx,
     period = isMobile ? 3000 : 5000;
-let sines = isMobile ? 10 : 36;
+let sines = isMobile ? 16 : 36;
 let amp = isMobile ? 30 :50;
 let hh;
 
 let rocket, rocketB;
 
 const s = (p) => {
-    w = p.windowWidth;
-    h = p.windowHeight * 3;
+    w = isMobile ? p.displayWidth:p.displayWidth-17;
+    h = p.displayHeight * 3;
 
     let color = {
         c1: p.color(4, 12, 68),
