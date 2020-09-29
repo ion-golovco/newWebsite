@@ -5,9 +5,6 @@ import { Container, Jumbotron, Row, Col } from "reactstrap";
 
 import NavBar from "./components/NavBar";
 import Hello from "./components/Hello";
-import ImageSlide from "./components/ImageSlide";
-import FavoriteProjects from "./components/FavoriteProjects";
-import Timeline from "./components/Timeline";
 
 import sketch from "./animatedBackground";
 
@@ -23,11 +20,12 @@ function App() {
                         <Col xs="12" md="7"></Col>
                     </Row>
 
-                    <Timeline />
-                    
                 </Container>
+                <Container><img style={{opacity:0.5}} width="100%" src ="https://i.imgur.com/CqznSi5.png" alt=""/></Container>
             </Container>
+
             <sketch />
+
             <Jumbotron id="footer">
                 GOLOVCO ION <sub>2020</sub>
             </Jumbotron>

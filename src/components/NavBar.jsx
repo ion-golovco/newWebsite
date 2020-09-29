@@ -1,9 +1,5 @@
 import React, { Component } from "react";
-import {
-    Navbar,
-    NavbarBrand,
-    Container,
-} from "reactstrap";
+import { Navbar, NavbarBrand, Container } from "reactstrap";
 
 class NavBar extends Component {
     state = {};
@@ -11,7 +7,9 @@ class NavBar extends Component {
         return (
             <Container>
                 <Navbar dark expand="md" class="navbar">
-                    <NavbarBrand href="https://github.com/ion-golovco">GOLOVCO ION</NavbarBrand>
+                    <img src="https://i.imgur.com/nDhRYnX.png" alt="" width="35" />
+                    <NavbarBrand href="https://github.com/ion-golovco" style={{
+                        "margin-left":"15px"}}>GOLOVCO ION</NavbarBrand>
                 </Navbar>
             </Container>
         );
