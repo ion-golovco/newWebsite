@@ -27,11 +27,11 @@ const s = (p) => {
         let cnv = p.createCanvas(w, h);
         cnv.position(0, 0, "absolute");
         cnv.style("z-index: -100");
-        if (!isMobile) {
+        
             for (let i = 0; i < 400; i++) {
                 arrPart.push(new particle());
             }
-        }
+    
         for (let i = -1; i < sines; i++) {
             arrSines.push(new sineWaveRect((w / sines) * i,i));
         }
@@ -45,17 +45,13 @@ const s = (p) => {
         
         for (let i of arrSines) {
             i.update();
-            if(!isMobile){
+            
             p.fill(22);
             p.rect(i.pos.n* w / sines + 1, i.pos.y + h / 3 - 150, w / sines + 1, 200, 20);
-            }else{
-                p.stroke(252, 102, 102)
-                p.fill(22)
-                p.rect(i.pos.n* w / sines + 1, i.pos.y + h / 3 - 150, w / sines + 1, 120, 20);
-            }
+            
         }
         p.noStroke();
-        if (!isMobile) {
+        
             for (let i of arrPart) {
                 p.fill(0);
                 if (hh > i.pos.y) {
@@ -63,7 +59,7 @@ const s = (p) => {
                 }
                 i.update();
                 p.circle(i.pos.x, i.pos.y, i.size);
-            }
+            
         }
     };
 };

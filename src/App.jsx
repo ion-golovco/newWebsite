@@ -5,6 +5,7 @@ import { Container, Jumbotron, Row, Col } from "reactstrap";
 
 import NavBar from "./components/NavBar";
 import Hello from "./components/Hello";
+import Projects from "./components/Projects"
 
 import sketch from "./animatedBackground";
 
@@ -21,7 +22,7 @@ function App() {
                     </Row>
 
                 </Container>
-                <Container><img style={{opacity:0.5}} width="100%" src ="https://i.imgur.com/CqznSi5.png" alt=""/></Container>
+                <Projects />
             </Container>
 
             <sketch />
