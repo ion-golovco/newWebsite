@@ -14,13 +14,6 @@ const s = (p) => {
     w = isMobile ? p.displayWidth:p.displayWidth-17;
     h = p.displayHeight * 3;
 
-    let color = {
-        c1: p.color(4, 12, 68),
-        c2: p.color(55, 52, 114),
-        c3: p.color(133, 94, 178),
-        c4: p.color(142, 146, 191),
-        c5: p.color(300, 300, 300),
-    };
     p.setup = function () {
         hh = h / 3;
         dx = (6 / period) * 20;
@@ -38,7 +31,7 @@ const s = (p) => {
     };
     p.draw = function () {
         p.noStroke();
-        p.fill(200);
+        p.fill(255);
         p.rect(0, 0, w, h);
         p.fill(22);
         p.rect(0, 0, w, hh-50);
@@ -53,10 +46,7 @@ const s = (p) => {
         p.noStroke();
         
             for (let i of arrPart) {
-                p.fill(0);
-                if (hh > i.pos.y) {
-                    p.fill(222);
-                }
+                p.fill(255)
                 i.update();
                 p.circle(i.pos.x, i.pos.y, i.size);
             

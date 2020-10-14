@@ -54,9 +54,11 @@
     }
     #textBreak {
         color: #fc6666;
-        background-color: transparent;
+        background-color: white;
         font-size: 30px;
+        padding: 0.5rem;
         text-align: center;
+        font-weight: bold;
     }
     #footer {
         color: #fc6666;
@@ -72,4 +74,15 @@
     #cardlink {
         color: #fc6666;
     }
-
+    #project{
+        background-color :transparent;
+        color:snow;
+    }
+#description{
+    background-color: lightgrey;
+    color:rgb(22, 22, 22);
+    text-align: center;
+    font-size: 16px;
+    border-radius: 1em;
+    margin-bottom: 4em;;
+}
