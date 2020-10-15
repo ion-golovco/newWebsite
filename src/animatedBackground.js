@@ -30,22 +30,21 @@ const s = (p) => {
         }
     };
     p.draw = function () {
-        if (!isMobile) {
-            p.noStroke();
-            p.fill(20, 15, 80);
-            p.rect(0, 0, w, h);
+        p.noStroke();
+        p.fill(20, 15, 80);
+        p.rect(0, 0, w, h);
+        p.fill(22);
+        p.rect(0, 0, w, hh - 50);
+
+        for (let i of arrSines) {
+            i.update();
+
             p.fill(22);
-            p.rect(0, 0, w, hh - 50);
 
-            for (let i of arrSines) {
-                i.update();
-
-                p.fill(22);
-                
-                p.rect((i.pos.n * w) / sines + 1, i.pos.y + h / 3 - 150, w / sines + 1, 200, 20);
-            }
-            p.noStroke();
-
+            p.rect((i.pos.n * w) / sines + 1, i.pos.y + h / 3 - 150, w / sines + 1, 200, 20);
+        }
+        p.noStroke();
+        if (!isMobile) {
             for (let i of arrPart) {
                 p.fill(255);
                 i.update();
