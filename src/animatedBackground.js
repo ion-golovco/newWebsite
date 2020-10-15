@@ -35,7 +35,7 @@ const s = (p) => {
         p.rect(0, 0, w, h);
         p.fill(22);
         p.rect(0, 0, w, hh - 50);
-
+        if (!isMobile) {
         for (let i of arrSines) {
             i.update();
 
@@ -44,7 +44,6 @@ const s = (p) => {
             p.rect((i.pos.n * w) / sines + 1, i.pos.y + h / 3 - 150, w / sines + 1, 200, 20);
         }
         p.noStroke();
-        if (!isMobile) {
             for (let i of arrPart) {
                 p.fill(255);
                 i.update();
