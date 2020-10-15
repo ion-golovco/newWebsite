@@ -22,7 +22,7 @@ const items = [
         link: "https://hereyougo.netlify.app/p5jslibraryandcode/p5articles/p5jsfractals",
         image: "https://i.imgur.com/vfNBJiS.png",
         title: "L-System fractals",
-    },
+    }
 ];
 
 export default items;

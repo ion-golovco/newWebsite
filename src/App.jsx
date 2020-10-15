@@ -20,13 +20,10 @@ function App() {
                         <Col xs="0" md="5"></Col>
                         <Col xs="12" md="7"></Col>
                     </Row>
-
                 </Container>
                 <Projects />
             </Container>
-
             <sketch />
-
             <Jumbotron id="footer">
                 GOLOVCO ION <sub>2020</sub>
             </Jumbotron>
