@@ -11,8 +11,8 @@ let amp = isMobile ? 25 : 50;
 let hh;
 
 const s = (p) => {
-    w = isMobile ? p.displayWidth : p.displayWidth - 17;
-    h = p.displayHeight * 3;
+    w = isMobile ? 0 : p.displayWidth - 17;
+    h = isMobile ? 0 : p.displayHeight * 3;
 
     p.setup = function () {
         hh = h / 3;
@@ -41,7 +41,7 @@ const s = (p) => {
                 i.update();
 
                 p.fill(22);
-                
+
                 p.rect((i.pos.n * w) / sines + 1, i.pos.y + h / 3 - 150, w / sines + 1, 200, 20);
             }
             p.noStroke();

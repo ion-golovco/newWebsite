@@ -11,7 +11,7 @@ import sketch from "./animatedBackground";
 
 function App() {
     return (
-        <div>
+        <div id = "body1">
             <NavBar />
             <Container>
                 <Hello />
