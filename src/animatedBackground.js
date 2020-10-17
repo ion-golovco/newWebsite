@@ -5,9 +5,9 @@ let w, h;
 let arrPart = [];
 let arrSines = [];
 let dx,
-    period = isMobile ? 3000 : 5000;
-let sines = isMobile ? 16 : 36;
-let amp = isMobile ? 25 : 50;
+    period = 15000;
+let sines = 36;
+let amp = 50;
 let hh;
 
 const s = (p) => {
@@ -28,21 +28,20 @@ const s = (p) => {
         for (let i = -1; i < sines; i++) {
             arrSines.push(new sineWaveRect((w / sines) * i, i));
         }
+        console.log(arrPart)
     };
     p.draw = function () {
         if (!isMobile) {
             p.noStroke();
-            p.fill(20, 15, 80);
+            p.fill(72,159,181);
             p.rect(0, 0, w, h);
-            p.fill(22);
-            p.rect(0, 0, w, hh - 50);
+            p.fill(20);
+            p.rect(0, 0, w, hh - 150);
 
             for (let i of arrSines) {
                 i.update();
-
-                p.fill(22);
-
-                p.rect((i.pos.n * w) / sines + 1, i.pos.y + h / 3 - 150, w / sines + 1, 200, 20);
+                
+                p.rect((i.pos.n * w) / sines + 1, i.pos.y + h / 3 - 250, w / sines + 1, 200);
             }
             p.noStroke();
 
@@ -54,6 +53,8 @@ const s = (p) => {
         }
     };
 };
+
+
 
 class particle {
     constructor() {
@@ -68,6 +69,7 @@ class particle {
         }
     }
 }
+
 function killParticle(i) {
     for (let j in arrPart) {
         if (arrPart[j] === i) {

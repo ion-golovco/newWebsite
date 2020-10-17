@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { Col, Container, Row, Collapse } from "reactstrap";
-import items from "../assets/items";
+import { Col, Container, Row, Collapse, Card, CardBody } from "reactstrap";
+import items from "../assets/items"
 
 const projects = items;
 
@@ -8,24 +8,28 @@ class Project extends Component {
     state = {
         tabOpen: -1,
     };
-    toggle = () => {
-        this.setState({
-            tabOpen: 3, //idk?
-        });
-    };
     createTile(p) {
-        let postImage = p.image ? (
-            <img id="image" src={p.image} alt={p.title} />
-        ) : null;
+        let postImage = p.image ? <img id="image" src={p.image} alt={p.title} /> : <Container id ="posttut"></Container>;
         return (
             <Container id="project">
                 <Row>
                     <Col md="12">
                         <Row>
-                            <Container id="post" onClick={this.toggle}>
-                                <div>{postImage}</div>
-                                <div id="textBreak">{p.title}</div>
-                                <Collapse isOpen={this.state.tabOpen === p.id}>{p.desc}</Collapse>
+                            <Container
+                                id="post"
+                                onClick={() => {
+                                    this.setState({ tabOpen: p.id });
+                                }}
+                            >
+                                <div id={"c4post"}>
+                                    <div>{postImage}</div>
+                                    <div id="textBreak">{p.title}</div>
+                                </div>
+                                <Collapse id="description" isOpen={this.state.tabOpen === p.id}>
+                                    <Card id="card">
+                                        <CardBody>{p.desc}</CardBody>
+                                    </Card>
+                                </Collapse>
                             </Container>
                         </Row>
                     </Col>
