@@ -5,23 +5,22 @@ let w, h;
 let arrPart = [];
 let arrSines = [];
 let dx,
-    period = isMobile ? 3000 : 5000;
-let sines = isMobile ? 16 : 36;
-let amp = isMobile ? 25 : 50;
+    period = 15000;
+let sines = 36;
+let amp = 50;
 let hh;
 
 const s = (p) => {
-    w = isMobile ? p.displayWidth : p.displayWidth - 17;
-    h = p.displayHeight * 3;
-
+    w = isMobile ? 0 : p.displayWidth - 17;
+    h = isMobile ? 0 : p.displayHeight * 4;
     p.setup = function () {
-        hh = h / 3;
+        hh = h / 4;
         dx = (6 / period) * 20;
         let cnv = p.createCanvas(w, h);
         cnv.position(0, 0, "absolute");
         cnv.style("z-index: -100");
 
-        for (let i = 0; i < 400; i++) {
+        for (let i = 0; i < 350; i++) {
             arrPart.push(new particle());
         }
 
@@ -36,14 +35,16 @@ const s = (p) => {
         p.fill(22);
         p.rect(0, 0, w, hh - 50);
         if (!isMobile) {
-        for (let i of arrSines) {
-            i.update();
-
-            p.fill(22);
-
-            p.rect((i.pos.n * w) / sines + 1, i.pos.y + h / 3 - 150, w / sines + 1, 200, 20);
-        }
-        p.noStroke();
+            p.noStroke();
+            p.fill(72,159,181);
+            p.rect(0, 0, w, h);
+            p.fill(20);
+            p.rect(0, 0, w, hh - 150);
+            for (let i of arrSines) {
+                i.update();
+                p.rect((i.pos.n * w) / sines + 1, i.pos.y + hh - 250, w / sines + 1, 200);
+            }
+            p.noStroke();
             for (let i of arrPart) {
                 p.fill(255);
                 i.update();
@@ -54,8 +55,8 @@ const s = (p) => {
 };
 
 class particle {
-    constructor() {
-        this.pos = { x: Math.random() * w, y: Math.random() * h };
+    constructor(c) {
+        this.pos = { x: Math.random() * w, y: Math.random() * hh * 2};
         this.velx = -Math.random();
         this.size = Math.random() * 3;
     }

@@ -1,44 +1,37 @@
 * {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Press Start 2P", cursive;
 }
+
 #jumbotron {
+    margin: 5rem 0rem 20rem 0rem;
+    text-align: center;
+    font-family: "Press Start 2P", cursive;
     background-color: transparent;
     color: white;
+}
+#textBreak {
+    color: #ffffff;
+    background-color: transparent;
+    font-size: 40px;
+    padding: 0.5rem;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .navbar {
     background-color: transparent;
 }
-.mainText {
-    font-size: 15vw;
+#mainText {
+    text-align: center;
+    font-family: "Press Start 2P", cursive;
+    font-size: 11vw;
     color: #fc6666;
 }
 hr.light {
-    border: 0;
-    height: 1px;
-    background-image: linear-gradient(
-        to right,
-        rgba(255, 255, 255, 0),
-        rgba(255, 255, 255, 0.75),
-        rgba(255, 255, 255, 0)
-    );
-}
-
-.card {
-    margin-top: 1em;
-    margin-bottom: 1em;
-    color: #5a3f3f;
-    cursor: pointer;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
-    font-size: 16px;
-}
-#mobilecard {
-    font-size: 10px;
-}
-
-.card:hover {
-    transform: translateY(-0.4em);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+    border: 1px solid white;
 }
 #pillText {
     transition: 0.3s;
@@ -64,48 +57,56 @@ hr.light {
     bottom: -2em;
     width: 100%;
 }
-#cardlink {
-    color: rgb(252, 102, 102);
-}
 #project {
     background-color: transparent;
     color: snow;
 }
 #description {
-    background-color: lightgrey;
-    color: rgb(22, 22, 22);
+    background-color: rgb(20, 20, 20);
     text-align: center;
-    font-size: 16px;
-    border-radius: 1em;
-    margin-bottom: 4em;
+    padding: 0em 4em;
+    font-size: 14px;
 }
-#post{
+#post {
     transition: 0.3s;
 }
-#post:hover {
-    transform: translateY(-0.4em);
-}
-#image{
+#image {
     object-fit: cover;
-    width: 100%; 
-    height: 200px; 
-    object-position: 20% 10%;
+    width: 100%;
+    height: 200px;
+    object-position: 20% 5 0%;
     transition: 0.3s;
 }
-#image:hover{
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+#image:hover {
+    box-shadow: 0 0px 0px 10px rgb(20, 20, 20);
 }
-#textBreak {
-    color: #ffffff;
-    background-color: transparent;
-    font-size: 40px;
-    padding: 0.5rem;
+#c4post {
+    position: relative;
     text-align: center;
-    font-weight: bold;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    cursor: pointer;
 }
-
-  
+#card {
+    color: #fc6666;
+    border: 0;
+    margin: 0rem -3rem;
+    background-color: rgb(20, 20, 20);
+}
+#posttut {
+    min-height: 70px;
+    background-color: rgb(20, 20, 20);
+}
+@media only screen and (max-width: 600px) {
+    #body1 {
+        background-color: rgb(20, 20, 20);
+    }
+    #jumbotron {
+        margin: 3rem 0rem;
+    }
+    #project {
+        padding-top: 1em;
+        background-color: rgb(72,159,181);
+    }
+    #textBreak {
+        font-size: 25px;
+    }
+}
