@@ -13,14 +13,14 @@ class Project extends Component {
         return (
             <Container id="project">
                 <Row>
-                    <Col md="12">
-                        <Row>
+                    <Col md="12" >
+                        <Row fluid = {true}>
                             <Container
+                            
                                 id="post"
                                 onClick={() => {
                                     this.setState({ tabOpen: p.id });
-                                }}
-                            >
+                                }}>
                                 <div id={"c4post"}>
                                     <div>{postImage}</div>
                                     <div id="textBreak">{p.title}</div>
@@ -38,7 +38,7 @@ class Project extends Component {
         );
     }
     render() {
-        return <div>{projects.map((a) => this.createTile(a))}</div>;
+        return <div fluid={true}>{projects.map((a) => this.createTile(a))}</div>;
     }
 }
 export default Project;

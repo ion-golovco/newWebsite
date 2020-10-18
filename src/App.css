@@ -1,4 +1,5 @@
 * {
+    z-index: 10;
     font-family: "Press Start 2P", cursive;
 }
 
@@ -6,7 +7,13 @@
     margin: 5rem 0rem 20rem 0rem;
     text-align: center;
     font-family: "Press Start 2P", cursive;
-    background-color: transparent;
+    color: white;
+    background-color: transparent
+}
+#jumbotron1 {
+    margin: 5rem 0rem 20rem 0rem;
+    background-color: #161616;
+    border-radius: 0em;
     color: white;
 }
 #textBreak {
@@ -25,9 +32,7 @@
     background-color: transparent;
 }
 #mainText {
-    text-align: center;
-    font-family: "Press Start 2P", cursive;
-    font-size: 11vw;
+    font-size: 12vw;
     color: #fc6666;
 }
 hr.light {
@@ -77,13 +82,15 @@ hr.light {
     object-position: 20% 5 0%;
     transition: 0.3s;
 }
-#image:hover {
-    box-shadow: 0 0px 0px 10px rgb(20, 20, 20);
-}
 #c4post {
     position: relative;
     text-align: center;
     cursor: pointer;
+    transition: .3s;
+}
+#c4post:hover {
+    transition: .3s;
+    box-shadow: 0 0px 0px 10px rgb(20, 20, 20);
 }
 #card {
     color: #fc6666;
@@ -95,6 +102,10 @@ hr.light {
     min-height: 70px;
     background-color: rgb(20, 20, 20);
 }
+#body1{
+    z-index: -1000;
+    background-color: rgb(252, 102, 102);
+}
 @media only screen and (max-width: 600px) {
     #body1 {
         background-color: rgb(20, 20, 20);
@@ -104,7 +115,7 @@ hr.light {
     }
     #project {
         padding-top: 1em;
-        background-color: rgb(72,159,181);
+        background-color: #fc6666;
     }
     #textBreak {
         font-size: 25px;
