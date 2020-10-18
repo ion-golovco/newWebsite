@@ -26,7 +26,7 @@ class Project extends Component {
                                     <div id="textBreak">{p.title}</div>
                                 </div>
                                 <Collapse id="description" isOpen={this.state.tabOpen === p.id}>
-                                    <Card id="card">
+                                    <Card id="card" md="12">
                                         <CardBody>{p.desc}</CardBody>
                                     </Card>
                                 </Collapse>

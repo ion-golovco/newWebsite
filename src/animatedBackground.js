@@ -12,23 +12,21 @@ let hh;
 
 const s = (p) => {
     w = isMobile ? 0 : p.displayWidth - 17;
-    h = isMobile ? 0 : p.displayHeight * 3;
-
+    h = isMobile ? 0 : p.displayHeight * 4;
     p.setup = function () {
-        hh = h / 3;
+        hh = h / 4;
         dx = (6 / period) * 20;
         let cnv = p.createCanvas(w, h);
         cnv.position(0, 0, "absolute");
         cnv.style("z-index: -100");
 
-        for (let i = 0; i < 400; i++) {
+        for (let i = 0; i < 350; i++) {
             arrPart.push(new particle());
         }
 
         for (let i = -1; i < sines; i++) {
             arrSines.push(new sineWaveRect((w / sines) * i, i));
         }
-        console.log(arrPart)
     };
     p.draw = function () {
         if (!isMobile) {
@@ -37,14 +35,11 @@ const s = (p) => {
             p.rect(0, 0, w, h);
             p.fill(20);
             p.rect(0, 0, w, hh - 150);
-
             for (let i of arrSines) {
                 i.update();
-                
-                p.rect((i.pos.n * w) / sines + 1, i.pos.y + h / 3 - 250, w / sines + 1, 200);
+                p.rect((i.pos.n * w) / sines + 1, i.pos.y + hh - 250, w / sines + 1, 200);
             }
             p.noStroke();
-
             for (let i of arrPart) {
                 p.fill(255);
                 i.update();
@@ -54,11 +49,9 @@ const s = (p) => {
     };
 };
 
-
-
 class particle {
-    constructor() {
-        this.pos = { x: Math.random() * w, y: Math.random() * h };
+    constructor(c) {
+        this.pos = { x: Math.random() * w, y: Math.random() * hh * 2};
         this.velx = -Math.random();
         this.size = Math.random() * 3;
     }
@@ -69,7 +62,6 @@ class particle {
         }
     }
 }
-
 function killParticle(i) {
     for (let j in arrPart) {
         if (arrPart[j] === i) {

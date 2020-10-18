@@ -40,6 +40,20 @@ const items = [
         title:"My new logo",
         date:"",
         desc: (<Container>Fractals are really cool arent they</Container>),
+    },
+    {
+        id:6,
+        title:"My new logo",
+        image: "https://i.imgur.com/yRRFDob.png",
+        date:"",
+        desc: (<Container>Fractals are really cool arent they</Container>),
+    },
+    {
+        id:7,
+        title:"ceva frumos",
+        image:"https://i.imgur.com/8Bc4M9H.png",
+        date:"",
+        desc:"asdfsfdhgdyjnnbetyjkifyhkfyl,fvyhkifjzs"
     }
 
 ];

@@ -6,18 +6,20 @@ import { Container, Jumbotron } from "reactstrap";
 import NavBar from "./components/NavBar";
 import Hello from "./components/Hello";
 import Projects from "./components/Projects";
+import AboutMe from "./components/AboutMe"
 
 import sketch from "./animatedBackground";
 
 function App() {
     return (
         <div id="body1">
-            <NavBar/>
+            <NavBar />
             <Container>
-                <Hello/>
-                <Projects/>
+                <Hello />
+                <Projects />
+                <AboutMe />
             </Container>
-            <sketch/>
+            <sketch />
             <Jumbotron id="footer">
                 GOLOVCO ION <sub>2020</sub>
             </Jumbotron>
