@@ -6,24 +6,22 @@ let arrPart = [];
 let arrSines = [];
 let dx,
     period = 15000;
-let sines = 36;
+let sines = 54;
 let amp = 50;
 let hh;
 
 const s = (p) => {
     w = isMobile ? 0 : p.displayWidth - 17;
-    h = isMobile ? 0 : p.displayHeight * 4;
+    h = isMobile ? 0 : p.displayHeight * 2;
     p.setup = function () {
-        hh = h / 4;
+        hh = h / 2;
         dx = (6 / period) * 20;
         let cnv = p.createCanvas(w, h);
         cnv.position(0, 0, "absolute");
-        cnv.style("z-index: -100");
-
+        cnv.style("z-index: 0");
         for (let i = 0; i < 350; i++) {
-            arrPart.push(new particle());
+            arrPart.push(new starBackground());
         }
-
         for (let i = -1; i < sines; i++) {
             arrSines.push(new sineWaveRect((w / sines) * i, i));
         }
@@ -36,7 +34,7 @@ const s = (p) => {
         p.rect(0, 0, w, hh - 50);
         if (!isMobile) {
             p.noStroke();
-            p.fill(72,159,181);
+            p.fill(252, 102, 102);
             p.rect(0, 0, w, h);
             p.fill(20);
             p.rect(0, 0, w, hh - 150);
@@ -51,12 +49,12 @@ const s = (p) => {
                 p.circle(i.pos.x, i.pos.y, i.size);
             }
         }
+
     };
 };
-
-class particle {
+class starBackground{
     constructor(c) {
-        this.pos = { x: Math.random() * w, y: Math.random() * hh * 2};
+        this.pos = { x: Math.random() * w, y: Math.random() * hh * 2 };
         this.velx = -Math.random();
         this.size = Math.random() * 3;
     }
@@ -74,7 +72,7 @@ function killParticle(i) {
             break;
         }
     }
-    arrPart.push(new particle());
+    arrPart.push(new starBackground());
 }
 class sineWaveRect {
     constructor(x, n) {
