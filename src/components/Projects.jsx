@@ -27,7 +27,8 @@ class Project extends Component {
                                 </div>
                                 <Collapse id="description" isOpen={this.state.tabOpen === p.id}>
                                     <Card id="card" md="12">
-                                        <CardBody>{p.desc}</CardBody>
+                                        <CardBody>{p.desc}<hr class="light" />{p.date}</CardBody>
+
                                     </Card>
                                 </Collapse>
                             </Container>

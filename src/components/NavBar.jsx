@@ -7,7 +7,7 @@ class NavBar extends Component {
         return (
             <Container>
                 <Navbar dark expand="md" class="navbar">
-                    <img src="https://i.imgur.com/nDhRYnX.png" alt="" width="35" />
+                    <img src="https://i.imgur.com/JJAAmwU.png" alt="" width="50" />
                     <NavbarBrand href="https://github.com/ion-golovco" style={{
                         "margin-left":"15px"}}>GOLOVCO ION</NavbarBrand>
                 </Navbar>
