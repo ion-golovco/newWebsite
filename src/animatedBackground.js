@@ -11,7 +11,7 @@ let amp = 50;
 let hh;
 
 const s = (p) => {
-    w = isMobile ? 0 : p.displayWidth - 17;
+    w = isMobile ? 0 : p.displayWidth ;
     h = isMobile ? 0 : p.displayHeight * 2;
     p.setup = function () {
         hh = h / 2;

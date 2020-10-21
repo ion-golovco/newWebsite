@@ -20,7 +20,7 @@ const items = [
                     <hr class="light" />
                 </p>
                 <p>
-                    As ambitious as it is, it is not imposible as more than 80% are complete. But
+                    As ambitious as it is, it is not imposible as more than 80% of the work is complete. But
                     you know how they say, the last leap is the hardest one! It is a hard chalenge
                     that I took maybe foolishly but, it was a great lesson about knowing my limits
                     and overcoming them. The code at the start is rather messy and is innefecient
@@ -71,7 +71,7 @@ const items = [
         title: "Chaos game shadows",
         image: "https://i.imgur.com/8Bc4M9H.png",
         link: "https://hereyougo.netlify.app/p5jslibraryandcode/index/chaos/",
-        date: "",
+        date: "10 october 2019",
         desc: <Row>
             <Row>
                 
@@ -83,7 +83,7 @@ const items = [
         title: "Solar System, v1?",
         image: "https://i.imgur.com/yRRFDob.png",
         link: "https://hereyougo.netlify.app/p5jslibraryandcode/p5articles/p5solarsystem",
-        date: "",
+        date: "6 october 2019",
         desc: "A solar system with hitboxes for the moons and planets",
     },
     {
@@ -91,23 +91,35 @@ const items = [
         title: "L-System fractals",
         image: "https://i.imgur.com/vfNBJiS.png",
         link: "https://hereyougo.netlify.app/p5jslibraryandcode/p5articles/p5jsfractals",
-        date: "",
+        date: "7 september 2019",
         desc: "Fractals are really cool",
     },
     {
         id: 6,
-        title: "My new logo",
-        image: "https://i.imgur.com/yRRFDob.png",
-        date: "",
-        desc: <Container>Fractals are really cool arent they</Container>,
+        title: "Landers",
+        image: "https://i.imgur.com/vfNBJiS.png",
+        link: "https://hereyougo.netlify.app/p5jslibraryandcode/project2/",
+        date: "26 july 2019",
+        desc: "a really bad rts :)",
     },
     {
         id: 7,
-        title: "ceva frumos",
-        image: "https://i.imgur.com/8Bc4M9H.png",
-        date: "",
-        desc: "asdfsfdhgdyjnnbetyjkifyhkfyl,fvyhkifjzs",
+        title: "RGB Background",
+        image: "https://i.imgur.com/vfNBJiS.png",
+        link: "https://hereyougo.netlify.app/p5jslibraryandcode/project2/",
+        date: "2 may 2019",
+        desc: "a really bad rts :)",
     },
+    {
+        id: 8,
+        title: "My first website!",
+        image: "https://i.imgur.com/vfNBJiS.png",
+        link: "https://hereyougo.netlify.app/p5jslibraryandcode/project2/",
+        date: "9 march 2019",
+        desc: "a really bad rts :)",
+    }
+
+
 ];
 
 export default items;

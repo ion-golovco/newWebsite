@@ -2,13 +2,12 @@
     z-index: 10;
     font-family: "Press Start 2P", cursive;
 }
-
 #jumbotron {
     margin: 5rem 0rem 20rem 0rem;
     text-align: center;
     font-family: "Press Start 2P", cursive;
     color: white;
-    background-color: transparent
+    background-color: transparent;
 }
 #jumbotron1 {
     margin: 5rem 0rem 20rem 0rem;
@@ -54,7 +53,6 @@ hr.pink {
     background-color: rgb(20, 20, 20);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
 }
-
 #footer {
     color: #fc6666;
     padding-top: 0.5em;
@@ -65,6 +63,7 @@ hr.pink {
     position: fixed;
     bottom: -2em;
     width: 100%;
+    z-index: 200;
 }
 #project {
     background-color: transparent;
@@ -90,10 +89,10 @@ hr.pink {
     position: relative;
     text-align: center;
     cursor: pointer;
-    transition: .3s;
+    transition: 0.3s;
 }
 #c4post:hover {
-    transition: .3s;
+    transition: 0.3s;
     box-shadow: 0 0px 0px 10px rgb(20, 20, 20);
 }
 #card {
@@ -106,11 +105,38 @@ hr.pink {
     min-height: 130px;
     background-color: rgb(20, 20, 20);
 }
-#body1{
+#body1 {
     z-index: -1000;
     background-color: rgb(252, 102, 102);
 }
+
+#projects-content {
+    overflow: auto;
+    height: 90vh;
+}
+#projects-content h6{
+    color: #ffffff;
+    font-size: 18px;
+    z-index: 100;
+    position: absolute;
+    margin: 11% 7%;
+    transform: rotate(-90deg);
+    left:0;
+}
+::-webkit-scrollbar {
+    width: 0px;
+}
+
 @media only screen and (max-width: 600px) {
+    #projects-content{
+        width: 100%;
+        margin:0em;
+    }
+    #projects-content h6{
+        left:0;
+        margin:5em -2em;
+        transform: rotate(90deg);
+    }
     #body1 {
         background-color: rgb(20, 20, 20);
     }
@@ -118,7 +144,7 @@ hr.pink {
         margin: 3rem 0rem;
     }
     #project {
-        padding-top: 1em;
+        padding-top: 0.5em;
         background-color: #fc6666;
     }
     #textBreak {
