@@ -16,7 +16,7 @@ function App() {
             <NavBar />
             <Container>
                 <Hello />
-                <div id="projects-content"> <Projects /></div>
+                <Projects />
                 <AboutMe />
                 <Container>2020 was a weird year</Container>
             </Container>

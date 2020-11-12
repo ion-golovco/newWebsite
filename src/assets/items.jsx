@@ -46,7 +46,7 @@ const items = [
                             like it so much. It's rather profound as it resembles two greek letters
                             that I am a very big fan of! The letters in question are: Ψψ (psi) and
                             Φφ (phi).
-                        </p>{" "}
+                        </p>
                         <hr class="light" />
                     </Col>
                 </Row>
@@ -100,14 +100,6 @@ const items = [
         image: "https://i.imgur.com/vfNBJiS.png",
         link: "https://hereyougo.netlify.app/p5jslibraryandcode/project2/",
         date: "26 july 2019",
-        desc: "a really bad rts :)",
-    },
-    {
-        id: 7,
-        title: "RGB Background",
-        image: "https://i.imgur.com/vfNBJiS.png",
-        link: "https://hereyougo.netlify.app/p5jslibraryandcode/project2/",
-        date: "2 may 2019",
         desc: "a really bad rts :)",
     },
     {
