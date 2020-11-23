@@ -91,6 +91,9 @@ hr.pink {
     cursor: pointer;
     transition: 0.3s;
 }
+#video{
+    padding: 1em 0em;
+}
 #c4post:hover {
     transition: 0.3s;
     box-shadow: 0 0px 0px 10px rgb(20, 20, 20);
