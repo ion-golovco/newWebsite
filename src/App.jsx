@@ -13,14 +13,14 @@ import sketch from "./animatedBackground";
 function App() {
     return (
         <div id="body1">
+            <sketch />
             <NavBar />
             <Container>
                 <Hello />
-                <div id="projects-content"> <Projects /></div>
+                <Projects />
                 <AboutMe />
                 <Container>2020 was a weird year</Container>
             </Container>
-            <sketch />
             <Jumbotron id="footer">
                 GOLOVCO ION <sub>2020</sub>
             </Jumbotron>

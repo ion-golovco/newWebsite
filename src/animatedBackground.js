@@ -6,12 +6,12 @@ let arrPart = [];
 let arrSines = [];
 let dx,
     period = 15000;
-let sines = 54;
-let amp = 50;
+let sines =60;let amp = 50;
+let timer = 0
 let hh;
 
 const s = (p) => {
-    w = isMobile ? 0 : p.displayWidth ;
+    w = isMobile ? 0 : p.windowWidth ;
     h = isMobile ? 0 : p.displayHeight * 2;
     p.setup = function () {
         hh = h / 2;
@@ -33,11 +33,18 @@ const s = (p) => {
         p.fill(22);
         p.rect(0, 0, w, hh - 50);
         if (!isMobile) {
+            timer++
+            if(timer%150===0){
+                w = isMobile ? 0 : p.windowWidth ;
+    h = isMobile ? 0 : p.displayHeight * 2;
+                let cnv = p.createCanvas(w, h);
+            }
             p.noStroke();
             p.fill(252, 102, 102);
             p.rect(0, 0, w, h);
             p.fill(20);
             p.rect(0, 0, w, hh - 150);
+
             for (let i of arrSines) {
                 i.update();
                 p.rect((i.pos.n * w) / sines + 1, i.pos.y + hh - 250, w / sines + 1, 200);

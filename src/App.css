@@ -91,6 +91,9 @@ hr.pink {
     cursor: pointer;
     transition: 0.3s;
 }
+#video{
+    padding: 1em 0em;
+}
 #c4post:hover {
     transition: 0.3s;
     box-shadow: 0 0px 0px 10px rgb(20, 20, 20);
@@ -109,34 +112,11 @@ hr.pink {
     z-index: -1000;
     background-color: rgb(252, 102, 102);
 }
-
-#projects-content {
-    overflow: auto;
-    height: 90vh;
-}
-#projects-content h6{
-    color: #ffffff;
-    font-size: 18px;
-    z-index: 100;
-    position: absolute;
-    margin: 11% 7%;
-    transform: rotate(-90deg);
-    left:0;
-}
 ::-webkit-scrollbar {
     width: 0px;
 }
 
 @media only screen and (max-width: 600px) {
-    #projects-content{
-        width: 100%;
-        margin:0em;
-    }
-    #projects-content h6{
-        left:0;
-        margin:5em -2em;
-        transform: rotate(90deg);
-    }
     #body1 {
         background-color: rgb(20, 20, 20);
     }

@@ -33,7 +33,7 @@ class Project extends Component {
                                     <Card id="card" md="12">
                                         <CardBody>
                                             {p.desc}
-                                            <hr class="light" />
+                                          <hr className="pink"/>
                                             {p.date}
                                         </CardBody>
                                     </Card>
@@ -46,7 +46,7 @@ class Project extends Component {
         );
     }
     render() {
-        return <Container fluid={true}><h6>{"<Scroll Down>"}</h6>{projects.map((a) => this.createTile(a))}</Container>;
+        return <Container><h6>{"<Scroll Down>"}</h6>{projects.map((a) => this.createTile(a))}</Container>;
     }
 }
 export default Project;
