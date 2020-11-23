@@ -115,7 +115,7 @@ const items = [
           fascinating. Now L-system fractals are the easiest and fastest way to
           get some nice looking fractals whithout much effort. So of course i
           tried a lot o different of types of L-systems. You can try them out in
-          the demo down bellow.
+          the demo down bellow. 
         </Col>
       </Row>
     ),
