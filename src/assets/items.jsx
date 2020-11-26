@@ -83,7 +83,7 @@ const items = [
             small, intriguing game.
           </p>
           
-          <iframe id="video"width="100%" height="450px" src="https://www.youtube.com/embed/kbKtFN71Lfs" frameborder="0" allowfullscreen></iframe>
+          <iframe id="video"width="100%" height="450px" title="videoChaosGame" src="https://www.youtube.com/embed/kbKtFN71Lfs" frameborder="0" allowfullscreen></iframe>
           <p>
             After playing around on it for maybe a bit too much, I was really
             interested in what this game is capable of. So I started changing
@@ -96,7 +96,7 @@ const items = [
             formed. I did research more online but found nothing about them.
             There is a demo down here if you want to try it out?
           </p>
-          <iframe src="#" frameborder="0" width="100%" height="500px" title="I"></iframe>
+          <iframe src={"https://hereyougo.netlify.app/p5jslibraryandcode/index/chaos"} frameborder="0" width="100%" height="500px" title="demoChaosGame"></iframe>
         </Col>
       </Row>
     ),

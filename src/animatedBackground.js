@@ -1,7 +1,7 @@
 import p5 from "p5";
 import { isMobile } from "react-device-detect";
 
-let w, h;
+let w, h,cnv;
 let arrPart = [];
 let arrSines = [];
 let dx,
@@ -16,7 +16,7 @@ const s = (p) => {
     p.setup = function () {
         hh = h / 2;
         dx = (6 / period) * 20;
-        let cnv = p.createCanvas(w, h);
+        cnv = p.createCanvas(w, h);
         cnv.position(0, 0, "absolute");
         cnv.style("z-index: 0");
         for (let i = 0; i < 350; i++) {
@@ -37,7 +37,7 @@ const s = (p) => {
             if(timer%150===0){
                 w = isMobile ? 0 : p.windowWidth ;
     h = isMobile ? 0 : p.displayHeight * 2;
-                let cnv = p.createCanvas(w, h);
+                cnv = p.createCanvas(w, h);
             }
             p.noStroke();
             p.fill(252, 102, 102);
