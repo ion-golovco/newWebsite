@@ -7,7 +7,7 @@ const items = [
     title: "Lost fear",
     image: "https://i.imgur.com/CzRzOib.png",
     link: "",
-    date: "2018 - 2020 in proggress",
+    date: "2018 - 2021 in proggress",
     desc: (
       <Row>
         <p>
@@ -96,7 +96,7 @@ const items = [
             formed. I did research more online but found nothing about them.
             There is a demo down here if you want to try it out?
           </p>
-          <iframe src={"https://hereyougo.netlify.app/p5jslibraryandcode/index/chaos"} frameborder="0" width="100%" height="500px" title="demoChaosGame"></iframe>
+         <a href="https://hereyougo.netlify.app/p5jslibraryandcode/index/chaos/">Here</a>
         </Col>
       </Row>
     ),
@@ -111,19 +111,23 @@ const items = [
     desc: (
       <Row>
         <Col>
+        <p>
           If you could not tell until now i really like fractals. They are just
           fascinating. Now L-system fractals are the easiest and fastest way to
           get some nice looking fractals whithout much effort. So of course i
           tried a lot o different of types of L-systems. You can try them out in
           the demo down bellow. 
+          </p>
+          <a href="https://hereyougo.netlify.app/p5jslibraryandcode/p5articles/p5jsfractals">Here!</a>
         </Col>
+        
       </Row>
     ),
   },
   {
     id: 6,
     title: "Landers",
-    image: "https://i.imgur.com/vfNBJiS.png",
+    image: "https://i.imgur.com/hDrbeoY.png",
     link: "https://hereyougo.netlify.app/p5jslibraryandcode/project2/",
     date: "26 july 2019",
     desc: (
@@ -142,12 +146,12 @@ const items = [
   {
     id: 8,
     title: "My first website!",
-    image: "https://i.imgur.com/vfNBJiS.png",
+    image: "https://media1.giphy.com/media/m6Wk0ecMoRhOGdc1H6/giphy.gif?cid=ecf05e479pzsatejvo7yonhkcm4m300v0a626wlb7bun4ym6&rid=giphy.gif",
     link: "https://hereyougo.netlify.app/p5jslibraryandcode/project2/",
     date: "9 march 2019",
     desc: (
       <Row>
-        <Col>This is where my Web development journey began.</Col>
+        <Col><p> This is where my Web development journey began.</p> <a href="https://hereyougo.netlify.app/p5jslibraryandcode/project2/">Here</a></Col>
       </Row>
     ),
   },

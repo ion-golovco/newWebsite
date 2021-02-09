@@ -46,7 +46,7 @@ class Project extends Component {
         );
     }
     render() {
-        return <Container><h6>{"<Scroll Down>"}</h6>{projects.map((a) => this.createTile(a))}</Container>;
+        return <Container>{projects.map((a) => this.createTile(a))}</Container>;
     }
 }
 export default Project;

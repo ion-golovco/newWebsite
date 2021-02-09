@@ -121,7 +121,7 @@ hr.pink {
         background-color: rgb(20, 20, 20);
     }
     #jumbotron {
-        margin: 3rem 0rem;
+        margin: 11rem 0rem;
     }
     #project {
         padding-top: 0.5em;
@@ -129,5 +129,8 @@ hr.pink {
     }
     #textBreak {
         font-size: 25px;
+    }
+    #card {
+        font-size: 9px;
     }
 }

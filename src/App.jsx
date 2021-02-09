@@ -11,6 +11,8 @@ import AboutMe from "./components/AboutMe";
 import sketch from "./animatedBackground";
 
 function App() {
+    var d = new Date();
+    const n = d.getFullYear();
     return (
         <div id="body1">
             <sketch />
@@ -22,7 +24,7 @@ function App() {
                 <Container>2020 was a weird year</Container>
             </Container>
             <Jumbotron id="footer">
-                GOLOVCO ION <sub>2020</sub>
+                GOLOVCOION<sup>{n}</sup>
             </Jumbotron>
         </div>
     );
