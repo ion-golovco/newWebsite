@@ -71,7 +71,7 @@ hr.pink {
 }
 #description {
     background-color: rgb(20, 20, 20);
-    text-align: center;
+    text-align: justify;
     padding: 0em 4em;
     font-size: 14px;
 }
